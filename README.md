@@ -18,7 +18,7 @@ Run this command on the CLI:
 Place the following code in ``application/bundles.php``:
 
 
-    'phpword'    => array(
+    'laravel-phpword'    => array(
         'auto'        => true
     )
 
