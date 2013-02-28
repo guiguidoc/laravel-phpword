@@ -19,7 +19,7 @@ Place the following code in ``application/bundles.php``:
 
 
     'phpword'    => array(
-        auto        => true
+        'auto'        => true
     )
 
 
