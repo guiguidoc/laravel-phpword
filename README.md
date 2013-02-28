@@ -11,7 +11,7 @@ No Windows operating system is needed for usage because the result are docx file
 
 Run this command on the CLI:
 
-    php artisan bundle:install phpword
+    php artisan bundle:install laravel-phpword
 
 ### Registering the Bundle
 
