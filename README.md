@@ -33,10 +33,10 @@ If you want to use the facade, add this to your facades in `config/app.php`:
 ### Usage ####
 
 ```php
-$objPHPWord = new PHPWord();
-$section = $objPHPWord->createSection();
+$phpWord = new PHPWord;
+$section = $phpWord->createSection();
 $section->addText('Test PhpWord');
-$writer = PHPWord_IOFactory::createWriter($objPHPWord, 'Word2007');;
+$writer = PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');;
 $writer->save("testword.docx");
 return Response::download('testword.docx', 'testword.docx');
 ```
