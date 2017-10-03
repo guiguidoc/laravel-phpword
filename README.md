@@ -24,10 +24,10 @@ If you don't use auto-discovery, add the ServiceProvider to the providers array 
 guiguidoc\LaravelPhpWord\PhpWordProvider::class,
 ```
 
-If you want to use the facade, add this to your facades in app.php:
+If you want to use the facade, add this to your facades in `config/app.php`:
 
 ```php
-'PhpWord' => PhpOffice\PhpWord\PhpWord::class,
+'PhpWord' => guiguidoc\LaravelPhpWord\PhpWordFacade::class,
 ```
 
 ### Usage ####
