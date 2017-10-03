@@ -1,0 +1,24 @@
+{
+  "name": "guiguidoc/laravel-phpword",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "phpoffice/phpword": "^0.9.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "guiguidoc\\LaravelPhpWord\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "guiguidoc\\LaravelPhpWord\\PhpWordProvider"
+      ],
+      "aliases": {
+        "PhpWord": "guiguidoc\\LaravelPhpWord\\PhpWordFacade"
+      }
+    }
+  }
+}
