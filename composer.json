@@ -17,7 +17,7 @@
         "guiguidoc\\LaravelPhpWord\\PhpWordProvider"
       ],
       "aliases": {
-        "PhpWord": "PhpOffice\\PhpWord\\PhpWord"
+        "PhpWord": "guiguidoc\\LaravelPhpWord\\PhpWordFacade"
       }
     }
   }
