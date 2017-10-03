@@ -10,27 +10,35 @@ No Windows operating system is needed for usage because the result are docx file
 ## Installation
 
 Run this command on the CLI:
+```bash
+composer require guiguidoc/laravel-phpword
+```
 
-    php artisan bundle:install laravel-phpword
+### Registering the package
 
-### Registering the Bundle
+Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
 
-Place the following code in ``application/bundles.php``:
+If you don't use auto-discovery, add the ServiceProvider to the providers array in `config/app.php`
 
+```php
+guiguidoc\LaravelPhpWord\PhpWordProvider::class,
+```
 
-    'laravel-phpword'    => array(
-        'auto'        => true
-    )
+If you want to use the facade, add this to your facades in app.php:
 
+```php
+'PhpWord' => PhpOffice\PhpWord\PhpWord::class,
+```
 
 ### Usage ####
 
-  		$objPHPWord = new PHPWord();
-		$section = $objPHPWord->createSection();
-		$section->addText('Test PhpWord');
-		$writer = PHPWord_IOFactory::createWriter($objPHPWord, 'Word2007');;
-		$writer->save("testword.docx");
-		return Response::download('testword.docx', 'testword.docx');
+```php
+$objPHPWord = new PHPWord();
+$section = $objPHPWord->createSection();
+$section->addText('Test PhpWord');
+$writer = PHPWord_IOFactory::createWriter($objPHPWord, 'Word2007');;
+$writer->save("testword.docx");
+return Response::download('testword.docx', 'testword.docx');
+```
 
-
-More info about PHPWord , visit : http://phpword.codeplex.com/
+More info about PHPWord , visit : http://phpword.codeplex.com
